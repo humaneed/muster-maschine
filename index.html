@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#8B7BA0">
+  <title>Muster-Maschine – Kidsneed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--s-1:8px;--s-2:16px;--s-3:24px;--s-4:32px;--radius-sm:12px;--radius-md:16px;--radius-lg:24px;--radius-xl:28px;--bg-canvas:#F5F0E8;--bg-card:#FFFFFF;--bg-muted:#EDE8DC;--ink-primary:#2D2A26;--ink-secondary:#6B665C;--accent:#8B7BA0;--accent-light:rgba(139,123,160,.12);--accent-dark:#6B5B80;--color-success:#7BA08A;--color-success-bg:rgba(123,160,138,.15);--color-error:#C4726C;--color-error-bg:rgba(196,114,108,.15);--text-2xl:24px;--text-xl:20px;--text-lg:18px;--text-md:16px;--text-sm:14px;--text-xs:12px;--motion-fast:150ms;--ease-out:cubic-bezier(0.33,1,0.68,1);--app-max-w:560px;--font:'Nunito',system-ui,sans-serif}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{height:100%}body{margin:0;background:var(--bg-canvas);color:var(--ink-primary);font-family:var(--font);font-weight:600;display:flex;align-items:center;justify-content:center;overflow:hidden}.app-frame{width:100%;height:100%;background:var(--bg-card);display:flex;flex-direction:column;overflow:hidden;position:relative}@media(min-width:520px){body{padding:var(--s-3)}.app-frame{max-width:var(--app-max-w);height:94dvh;max-height:920px;border:3px solid var(--ink-primary);border-radius:var(--radius-lg)}}header{height:72px;padding:0 var(--s-3);display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--ink-primary)}.brand-title{font-size:var(--text-xl);font-weight:900}.brand-subtitle{font-size:var(--text-xs);font-weight:900;text-transform:uppercase;letter-spacing:.10em;color:var(--ink-secondary)}.pill{min-height:48px;padding:10px 12px;border-radius:var(--radius-sm);border:2px solid var(--ink-primary);background:var(--bg-muted);display:flex;align-items:center;gap:6px}.pill .val{font-weight:900;font-size:var(--text-sm)}.viewport{flex:1;overflow-y:auto;padding:var(--s-3);background:radial-gradient(1200px 340px at 50% 0%,rgba(139,123,160,.08),transparent 60%),var(--bg-card)}.card{border:3px solid var(--ink-primary);border-radius:var(--radius-lg);margin-bottom:var(--s-3)}.card-section{padding:var(--s-3)}.card-section+.card-section{border-top:3px solid var(--ink-primary)}.section-label{font-size:var(--text-xs);font-weight:900;text-transform:uppercase;letter-spacing:.10em;color:var(--ink-secondary);margin-bottom:var(--s-2)}.grade-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-1)}.grade-btn{min-height:52px;border-radius:var(--radius-sm);border:2px solid var(--ink-primary);background:var(--bg-muted);font-family:var(--font);font-weight:900;font-size:var(--text-lg);cursor:pointer;transition:transform var(--motion-fast)}.grade-btn.selected{background:var(--accent);color:white;border-color:var(--accent-dark)}.task-area{background:var(--bg-muted);border:3px solid var(--ink-primary);border-radius:var(--radius-md);padding:var(--s-3)}.pattern-row{display:flex;justify-content:center;align-items:center;gap:var(--s-1);flex-wrap:wrap;margin-bottom:var(--s-2)}.pattern-item{width:48px;height:48px;border:3px solid var(--ink-primary);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:var(--text-xl);font-weight:900;background:var(--bg-card)}.pattern-item.gap{background:var(--accent-light);border-style:dashed;border-color:var(--accent);font-size:var(--text-2xl);color:var(--accent)}.task-hint{font-size:var(--text-sm);color:var(--ink-secondary);font-weight:800;text-align:center}.answers{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-2);margin-top:var(--s-3)}.answer-btn{padding:var(--s-2);border:3px solid var(--ink-primary);border-radius:var(--radius-md);background:var(--bg-card);font-family:var(--font);font-size:var(--text-xl);font-weight:900;cursor:pointer;min-height:56px;display:flex;align-items:center;justify-content:center;transition:transform var(--motion-fast)}.answer-btn:hover{transform:translateY(-2px);background:var(--accent-light)}.answer-btn.correct{background:var(--color-success);border-color:var(--color-success);color:white}.answer-btn.incorrect{background:var(--color-error);border-color:var(--color-error);color:white}.feedback{margin-top:var(--s-3);padding:var(--s-2);border-radius:var(--radius-sm);border:2px solid var(--ink-primary);background:var(--bg-muted);font-weight:900;font-size:var(--text-sm);color:var(--ink-secondary);display:flex;align-items:center;gap:10px}.feedback.success{background:var(--color-success-bg);border-color:var(--color-success);color:#2D5A3A}.feedback.error{background:var(--color-error-bg);border-color:var(--color-error);color:#6B3A32}.btn{min-height:52px;padding:14px 18px;border-radius:var(--radius-sm);border:2px solid var(--ink-primary);background:var(--bg-card);color:var(--ink-secondary);font-family:var(--font);font-weight:900;font-size:var(--text-md);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}.btn.primary{background:var(--accent);color:white;border-color:var(--accent-dark)}.actions{display:flex;gap:var(--s-2);margin-top:var(--s-3)}.actions .btn{flex:1}footer{padding:var(--s-2) var(--s-3);padding-bottom:max(var(--s-2),env(safe-area-inset-bottom));border-top:3px solid var(--ink-primary);display:flex;gap:var(--s-2)}footer .btn{flex:1}.overlay{position:absolute;inset:0;background:rgba(0,0,0,.26);display:none;align-items:flex-end;justify-content:center;padding:var(--s-3);z-index:100}.overlay.open{display:flex}.sheet{width:100%;max-width:560px;max-height:85vh;overflow-y:auto;border:3px solid var(--ink-primary);border-radius:var(--radius-xl);background:var(--bg-card);padding:var(--s-3)}.sheet h2{margin:0 0 var(--s-2);font-size:var(--text-xl);font-weight:900;text-align:center}.sheet-actions{display:flex;gap:var(--s-2);margin-top:var(--s-3)}.sheet-actions .btn{flex:1}
+  </style>
+</head>
+<body>
+  <div class="app-frame">
+    <header>
+      <div><div class="brand-title">◆ Muster-Maschine</div><div class="brand-subtitle">Kidsneed Logik</div></div>
+      <div class="pill"><span>✓</span><span class="val" id="score">0</span>/<span class="val" id="total">0</span></div>
+    </header>
+    <main class="viewport">
+      <div class="card">
+        <section class="card-section">
+          <div class="section-label">Schwierigkeit</div>
+          <div class="grade-grid" id="grades"><button class="grade-btn selected" data-g="1">1</button><button class="grade-btn" data-g="2">2</button><button class="grade-btn" data-g="3">3</button><button class="grade-btn" data-g="4">4</button></div>
+        </section>
+        <section class="card-section">
+          <div class="task-area">
+            <div class="pattern-row" id="pattern"></div>
+            <div class="task-hint">Was kommt als nächstes?</div>
+          </div>
+          <div class="answers" id="answers"></div>
+          <div class="feedback" id="feedback"><span>🔍</span><span>Erkenne das Muster!</span></div>
+        </section>
+        <section class="card-section">
+          <div class="actions"><button class="btn" id="help-btn">💡 Hilfe</button><button class="btn primary" id="next-btn">Nächstes Muster</button></div>
+        </section>
+      </div>
+    </main>
+    <footer><a class="btn" href="https://humaneed.github.io/kidsneed/">← Hub</a><button class="btn" id="stats-btn">📊 Statistik</button></footer>
+    <div class="overlay" id="modal-help"><div class="sheet"><h2>💡 Muster erkennen</h2><p style="color:var(--ink-secondary);font-size:var(--text-sm);text-align:center"><strong>Zahlen:</strong> Werden sie größer/kleiner?<br><strong>Formen:</strong> Wiederholen sie sich?</p><div class="sheet-actions"><button class="btn primary" id="close-help">Verstanden!</button></div></div></div>
+    <div class="overlay" id="modal-stats"><div class="sheet"><h2>📊 Statistik</h2><div id="stats-content"></div><div class="sheet-actions"><button class="btn primary" id="close-stats">Schließen</button></div></div></div>
+  </div>
+<script>
+(()=>{'use strict';const $=id=>document.getElementById(id);
+const SHAPES=['●','■','▲','★','◆','♥'];
+const state={grade:1,score:0,total:0,currentTask:null,answered:false};
+const rand=(min,max)=>Math.floor(Math.random()*(max-min+1))+min;
+const pick=arr=>arr[rand(0,arr.length-1)];
+const shuffle=arr=>arr.slice().sort(()=>Math.random()-0.5);
+const saveState=()=>{try{localStorage.setItem('kidsneed_muster',JSON.stringify({score:state.score,total:state.total,grade:state.grade}))}catch{}};
+const loadState=()=>{try{const s=JSON.parse(localStorage.getItem('kidsneed_muster'));if(s){Object.assign(state,s);document.querySelectorAll('.grade-btn').forEach(b=>b.classList.toggle('selected',+b.dataset.g===state.grade))}}catch{}};
+const audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+const playBeep=(freq,dur)=>{if(audioCtx.state==='suspended')audioCtx.resume();const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.connect(gain);gain.connect(audioCtx.destination);osc.frequency.value=freq;gain.gain.setValueAtTime(0.3,audioCtx.currentTime);gain.gain.exponentialRampToValueAtTime(0.01,audioCtx.currentTime+dur);osc.start();osc.stop(audioCtx.currentTime+dur)};
+const updateStats=()=>{$('score').textContent=state.score;$('total').textContent=state.total};
+const showFeedback=(text,type='')=>{const fb=$('feedback');fb.className='feedback'+(type?' '+type:'');fb.innerHTML=`<span>${type==='success'?'✅':type==='error'?'❌':'🔍'}</span><span>${text}</span>`};
+const generateNumberPattern=()=>{const start=rand(1,10);const step=rand(1,state.grade+2);const seq=[];for(let i=0;i<5;i++)seq.push(start+i*step);const answer=seq.pop();const opts=[answer];while(opts.length<4){const w=answer+rand(-5,5);if(w>0&&!opts.includes(w))opts.push(w)}return{seq,answer,type:'number',options:shuffle(opts)}};
+const generateShapePattern=()=>{const shapes=shuffle(SHAPES).slice(0,2);const seq=[];for(let i=0;i<5;i++)seq.push(shapes[i%2]);const answer=seq.pop();return{seq,answer,type:'shape',options:shuffle([answer,...shuffle(SHAPES).filter(s=>s!==answer).slice(0,3)])}};
+const newTask=()=>{const type=rand(0,1)?'number':'shape';state.currentTask=type==='number'?generateNumberPattern():generateShapePattern();state.answered=false;
+let html='';state.currentTask.seq.forEach(item=>{html+=`<div class="pattern-item">${item}</div>`});html+='<div class="pattern-item gap">?</div>';$('pattern').innerHTML=html;
+$('answers').innerHTML=state.currentTask.options.map(o=>`<button class="answer-btn" data-val="${o}">${o}</button>`).join('');showFeedback('Erkenne das Muster!')};
+const checkAnswer=(selected)=>{if(state.answered)return;state.answered=true;state.total++;const correct=String(state.currentTask.answer);const isCorrect=selected===correct;if(isCorrect){state.score++;showFeedback('Richtig!','success');playBeep(523,0.12);setTimeout(()=>playBeep(659,0.15),100)}else{showFeedback(`Fast! Richtig war: ${correct}`,'error');playBeep(294,0.2)}document.querySelectorAll('.answer-btn').forEach(btn=>{if(btn.dataset.val===correct)btn.classList.add('correct');else if(btn.dataset.val===selected&&!isCorrect)btn.classList.add('incorrect');btn.disabled=true});updateStats();saveState()};
+$('grades').onclick=e=>{const btn=e.target.closest('.grade-btn');if(!btn)return;state.grade=+btn.dataset.g;document.querySelectorAll('.grade-btn').forEach(b=>b.classList.toggle('selected',+b.dataset.g===state.grade));saveState();newTask()};
+$('answers').onclick=e=>{const btn=e.target.closest('.answer-btn');if(btn)checkAnswer(btn.dataset.val)};
+$('next-btn').onclick=newTask;
+$('help-btn').onclick=()=>$('modal-help').classList.add('open');
+$('close-help').onclick=()=>$('modal-help').classList.remove('open');
+$('stats-btn').onclick=()=>{const acc=state.total>0?Math.round((state.score/state.total)*100):0;$('stats-content').innerHTML=`<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s-2)"><div style="background:var(--bg-muted);border:2px solid var(--ink-primary);border-radius:var(--radius-md);padding:var(--s-2);text-align:center"><div style="font-size:var(--text-2xl);font-weight:900;color:var(--accent)">${state.total}</div><div style="font-size:var(--text-xs);font-weight:900;color:var(--ink-secondary)">MUSTER</div></div><div style="background:var(--bg-muted);border:2px solid var(--ink-primary);border-radius:var(--radius-md);padding:var(--s-2);text-align:center"><div style="font-size:var(--text-2xl);font-weight:900;color:var(--accent)">${acc}%</div><div style="font-size:var(--text-xs);font-weight:900;color:var(--ink-secondary)">RICHTIG</div></div></div>`;$('modal-stats').classList.add('open')};
+$('close-stats').onclick=()=>$('modal-stats').classList.remove('open');
+document.querySelectorAll('.overlay').forEach(ov=>{ov.onclick=e=>{if(e.target===ov)ov.classList.remove('open')}});
+document.onkeydown=e=>{if(e.key==='Escape')document.querySelectorAll('.overlay').forEach(o=>o.classList.remove('open'));if(e.key==='Enter'){e.preventDefault();newTask()}if('1234'.includes(e.key)){const btn=$('answers').querySelectorAll('.answer-btn')[+e.key-1];if(btn)btn.click()}};
+loadState();updateStats();newTask();console.log('✅ Muster-Maschine geladen.')})();
+</script>
+</body>
+</html>
